@@ -199,6 +199,8 @@ p {
   font-family: var(--font-heading);
   font-weight: var(--font-semibold);
   font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   cursor: pointer;
   transition: background 0.3s ease;
   text-decoration: none;
@@ -229,6 +231,8 @@ p {
   font-family: var(--font-heading);
   font-weight: var(--font-semibold);
   font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
@@ -1540,6 +1544,8 @@ p {
   font-family: var(--font-heading);
   font-weight: var(--font-bold);
   font-size: var(--text-base);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   cursor: pointer;
   transition: all 0.3s ease;
   letter-spacing: 0.02em;

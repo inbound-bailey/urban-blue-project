@@ -523,6 +523,7 @@ p {
 
 .nav__cta {
   display: none;
+  position: relative;
   background: var(--navy);
   border: 1px solid rgba(15, 43, 60, 0.8);
   box-shadow: 0 4px 16px rgba(15, 43, 60, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.08);
@@ -530,25 +531,21 @@ p {
   font-size: var(--text-xs);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  overflow: hidden;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
 }
 
 .nav__cta .nav__cta-arrow {
-  display: inline-block;
-  width: 0;
-  margin-left: 0;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-4px);
   opacity: 0;
-  overflow: hidden;
-  transform: translateX(-4px);
-  transition: width 0.3s ease, margin-left 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .nav__cta:hover .nav__cta-arrow {
-  width: 16px;
-  margin-left: 8px;
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(-50%) translateX(0);
 }
 
 .nav__cta:hover {

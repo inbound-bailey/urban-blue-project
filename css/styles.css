@@ -1712,10 +1712,18 @@ p {
   gap: var(--space-lg);
 }
 
+.footer__bottom--centered {
+  text-align: center;
+  justify-content: center;
+}
+
 @media (min-width: 768px) {
   .footer__bottom {
     flex-direction: row;
     justify-content: space-between;
+  }
+  .footer__bottom--centered {
+    justify-content: center;
   }
 }
 

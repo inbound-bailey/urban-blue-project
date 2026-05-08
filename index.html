@@ -628,37 +628,6 @@
       btn.setAttribute('aria-expanded', String(!isActive));
     });
 
-    // Form submission
-    var form = document.getElementById('contact-form');
-    if (form) {
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        var submitBtn = form.querySelector('.form__submit');
-        var successEl = form.parentElement.querySelector('.form__success');
-        var errorEl = form.parentElement.querySelector('.form__error');
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-        successEl.style.display = 'none';
-        errorEl.style.display = 'none';
-        var data = new FormData(form);
-        fetch(form.action, {
-          method: 'POST',
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        }).then(function(res) {
-          if (res.ok) {
-            form.style.display = 'none';
-            successEl.style.display = 'block';
-          } else {
-            throw new Error('Submission failed');
-          }
-        }).catch(function() {
-          errorEl.style.display = 'block';
-          submitBtn.textContent = 'Send inquiry';
-          submitBtn.disabled = false;
-        });
-      });
-    }
   </script>
 
 </body>
